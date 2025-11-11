@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Katibeh&display=swap");
+
+/* RESET E BASE */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #fff;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+}
+
+#navbar #navin {
+    display: flex;
+    align-items: center;
+}
+
+#navbar #navin #nome-logo a {
+    color: #7E0000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#navbar #navin #nome-logo a:hover {
+    transition: 0.5s;
+    font-size: 21px;
+}
+
+#navbar #flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#navbar #flex a {
+    color: #000;
+    font-size: 500;
+}
+
+#navbar #flex a:hover {
+    color: #7E0000;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 3px;
+}
+
+/* HEADER */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../IMG/Sem título1.png');
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.banner #frase-logo {
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Katibeh', cursive;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.banner .btn {
+    background-color: #DFB21C;
+    border-radius: 50px;
+    font-family: 'Katibeh';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    margin-top: 25px;
+}
+
+.banner .btn a {
+    color: #fff;
+}
+
+.banner .btn a:hover {
+    transition: 0.5s;
+    font-size: 21px;
+}
+
+/* MAIN */
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('../IMG/Sem título1.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: -40px;
+}
+
+.main p {
+    margin-top: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Katibeh';
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main .btn {
+    background-color: #DFB21C;
+    border-radius: 50px;
+    font-family: 'Katibeh';
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+}
+
+.main .btn a {
+    color: #fff;
+}
+
+.main .btn a:hover {
+    transition: 0.5s;
+    font-size: 21px;
+}
+
+/* ======== CARROSSEL (Swiper) ======== */
+.carrosel {
+    position: relative;
+    width: 80%;
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.carrosel .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.carrosel .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrosel .card {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carrosel .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.carrosel .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.carrosel .card figcaption {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: #fff;
+    font-family: 'Katibeh';
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Remove sombras do swiper */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+    display: none;
+}
+
+/* ======== BOTÕES ======== */
+.carrosel .swiper-button-next,
+.carrosel .swiper-button-prev {
+    background: #fff;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.carrosel .swiper-button-next::after,
+.carrosel .swiper-button-prev::after {
+    font-size: 2rem;
+    color: #222224;
+}
+
+/* ======== PAGINAÇÃO ======== */
+.carrosel .swiper-pagination {
+    position: relative;
+    width: 15rem;
+    bottom: 1rem;
+    margin: 0 auto;
+}
+
+.carrosel .swiper-pagination .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.carrosel .swiper-pagination .swiper-pagination-bullet-active {
+    background: #DFB21C;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 800px) {
+    .carrosel .card {
+        width: 28rem;
+        height: 36rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .carrosel {
+        width: 95%;
+    }
+
+    .carrosel .card {
+        width: 24rem;
+        height: 32rem;
+    }
+}
+
+.contato-whats {
+    position: fixed;
+    bottom: 20px;
+    /* Distância da borda inferior */
+    right: 20px;
+    /* Distância da borda direita */
+    z-index: 1000;
+}
+
+.contato-whats a img {
+    width: 100px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #fff;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer #numero-telefone {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer p {
+    color: #000;
+}
